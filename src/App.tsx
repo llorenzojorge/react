@@ -1,5 +1,10 @@
+import { Button } from "./components/button"
+
 export function App() {
   return (
-    <h1>Olá</h1>
+    <>
+      <Button name="botao" onClick={() => alert("botao teste")}/>
+      <Button name="botao2" />
+    </>
   )
 }
