@@ -1,7 +1,13 @@
+import styles from "./styles.module.css"
+
 type Props = React.ComponentProps<"button"> & {
   name: string
 }
 
 export function Button({ name, ...rest }: Props) {
-  return <button {...rest}>{name}</button>
+  return (
+    <button className={styles.container} {...rest}>
+      {name}
+    </button>
+  )
 }
