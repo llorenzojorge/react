@@ -1,5 +1,5 @@
 import "./global.css"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 import { Button } from "./components/button"
 import styles from "./app.module.css" 
@@ -10,6 +10,12 @@ export function App() {
   const [count, setCount] = useState(0)
 
   // const { show } = useMessage({ age: 21, name: "Lorenzo"})
+
+  useEffect(() => {
+    if (count > 0) {
+      console.log(`O valor de mudou para ${count}`)
+    }
+  }, [count])
 
   return (
     <div className={styles.container}>
